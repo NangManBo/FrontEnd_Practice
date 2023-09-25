@@ -1,0 +1,111 @@
+
+/* 페이지 전체 */
+html {
+    background-color: rgb(75, 75, 75);
+    
+    font-size:15px;
+}
+
+/* 첫번째 제목 */
+h1 {
+    background-color: #000000;
+    color: #ffffff;
+
+    box-sizing: border-box;
+    position: absolute;
+    left : 2%;
+
+    width: 95%;
+    height: 5%;
+    
+    font-size: 100%;
+    line-height: 200%;
+    text-align: center;
+}
+
+    
+
+/* ----------------------------------- 게임 */
+div.container_1 {
+    background-color: #000000;
+    color: #ffffff;
+
+    box-sizing: border-box;
+
+    position:absolute;
+    top: 10%;
+    left :2%;
+
+    width: 95%;
+    height: 20%;
+}
+
+/* 취미 */
+h2.hobby {
+    position: relative;
+    left: 1%;
+
+    font-size: 100%;
+}
+
+/* 게임 */
+h3.game {
+    position: relative;
+    left: 2%;
+
+    font-size: 100%;
+}
+
+/* 게임 목록 */
+
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+/* 피파 이미지 */
+div.fifaimg {
+    box-sizing: border-box;
+    position: absolute;
+    left: 3%;
+    top: 35%;
+}
+
+/* 롤 이미지 */
+div.lolimg {
+    box-sizing: border-box;
+    position: absolute;
+    left: 37%;
+    top: 35%;
+}
+
+/* --------------------------------------- 음식 */
+div.container_2{
+    background-color: #000000;
+    color: #ffffff;
+
+    box-sizing: border-box;
+    position: absolute;
+    top: 65%;
+    left: 2%;
+
+    width: 95%;
+    height: 25%;
+}
+
+/* 좋아하는 음식 */
+h2.food{
+    position: relative;
+    left: 1%;
+
+    font-size: 100%;
+}
+
+/* 종 류 */
+h3.food_category {
+    position: relative;
+    left: 2%;
+
+    font-size: 100%;
+}
+

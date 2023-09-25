@@ -1,0 +1,62 @@
+.container{
+    background: rgb(44, 44, 44);
+    text-align: center;
+    border-radius: 5px;
+
+    margin-left : 100px;
+    width : 120vh;
+    height: 80vh;
+}
+
+#ti{
+    position: fixed;
+    color : white;
+
+    top : 60px;
+    left : 425px;
+
+    font-size: 30px;
+}
+
+.InputFiled{
+    position: fixed;
+
+    top: 140px;
+    left : 160px;
+
+    width: 700px;
+    height: 60px;
+
+    outline: none;
+}
+
+#input{
+    width: 400px;
+    height: 30px;
+    border-radius: 5px;
+}
+
+#add{
+    background: white;
+
+    font-size : 25px;
+    
+    width: 50px;
+    height: 50px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.PlusFiled{
+    position: relative;
+    text-align: left;
+    left : 125px;
+    width: 400px;
+    list-style: none;
+    line-height: 30px; 
+
+    color : white;
+    font-style: bold;
+    margin-bottom: 9px;
+    cursor: pointer;
+}
