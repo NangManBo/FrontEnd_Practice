@@ -4,12 +4,24 @@ import {
   Text, 
   View, 
   TouchableOpacity, 
-  TouchableHighlight,
-TouchableWithoutFeedback,
-pressable } from 'react-native';
+  TextInput
+} from 'react-native';
 import { theme } from "./colors";
+import React, {useState} from "react";
 
 export default function App() {
+  const [working, setWorking] = useState(true);
+  const [text, setText] = useState("");
+  const [toDos, setToDos]=useState({});
+  const travel = () =>setWorking(false);
+  const work = () =>setWorking(true);
+  const onChangeText = (payload) => setText(payload);
+  const addToDo = () => {
+    if(text === ""){return;} 
+    alert(text);
+    setText(""); 
+  }
+
   return (
     <View style={styles.container}>
 
@@ -17,18 +29,28 @@ export default function App() {
 
       <View style={styles.header}> 
          
-        <TouchableOpacity> 
-           <Text style={styles.btnText}>Work</Text>
+        <TouchableOpacity onPress ={work}> 
+           <Text style={{...styles.btnText, color : working ? "white": theme.grey}}>
+            Work</Text>
         </TouchableOpacity>
 
-        <TouchableHighlight 
-          // underlayColor= "#DDDDDD"
-          activeOpacity={0.2}
-          onPress={()=> console.log("pressed")}>  
-          <Text style={styles.btnText}>Travel</Text>
-        </TouchableHighlight>
-      </View>
+        <TouchableOpacity onPress ={travel}>  
+          <Text style={{...styles.btnText, color : !working ? "white": theme.grey}}>
+            Travel</Text>
+        </TouchableOpacity>
 
+      </View>
+      
+      
+      <TextInput
+        onSubmitEditing={addToDo} 
+        onChangeText={onChangeText}
+        returnKeyType='done'
+        value={text}
+        placeholder={working ? "Add a To Do": "Where do you want"}
+        style={styles.input}>
+      </TextInput>
+      
     </View>
   );
 }
@@ -50,6 +72,14 @@ const styles = StyleSheet.create({
   btnText:{
     fontSize: 38,
     fontWeight: "600",
-    color:"white",
   },
+
+  input:{
+    backgroundColor : "white",
+    paddingVertical : 15,
+    paddingHorizontal : 20,
+    borderRadius: 30,
+    marginTop : 30,
+    fontSize : 15,
+  }
 });
