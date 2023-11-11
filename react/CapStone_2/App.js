@@ -1,334 +1,346 @@
-import React from 'react'
-import { View, Text, Image, StyleSheet } from 'react-native'
-import { Svg } from 'react-native-svg'
+import * as React from 'react';
+import {
+  StyleSheet,
+  Text,
+  View,
+  Pressable,
+  Image,
+} from 'react-native';
+import {
+  Color,
+  FontFamily,
+  FontSize,
+  Border,
+} from './GlobalStyles';
 
-export default function Main_LayoutiPhone14 () {
+const MainLayoutIPhone14 = () => {
   return (
-    <View style={Main_LayoutiPhone14Styles.Main_LayoutiPhone14}>
-      <View style={Main_LayoutiPhone14Styles.Frame3}>
-        <View style={Main_LayoutiPhone14Styles.Group3}>
-          <View style={Main_LayoutiPhone14Styles.RightSide}>
-            <View style={Main_LayoutiPhone14Styles.Battery}>
-              <Svg id='Rectangle' />
-              <Svg id='CombinedShape' />
-              <Svg id='Rectangle' />
-            </View>
-            <Svg id='Wifi' />
-            <Svg id='MobileSignal' />
-          </View>
-          <Text style={Main_LayoutiPhone14Styles.941}>
-            9:41
-          </Text>
-        </View>
-      </View>
-      <View style={Main_LayoutiPhone14Styles.Category}>
-        <Text style={Main_LayoutiPhone14Styles.}>
+    <View style={styles.mainLayoutIphone14}>
+      <View
+        style={[
+          styles.mainLayoutIphone14Inner,
+          styles.thumblayoutChildPosition,
+        ]}
+      ></View>
+      <View
+        style={[styles.category, styles.categoryLayout]}
+      >
+        <Text style={[styles.text1, styles.textTypo1]}>
           카테고리별 투표
         </Text>
-        <View style={Main_LayoutiPhone14Styles.Group5}>
-          <Text style={Main_LayoutiPhone14Styles.}>
-            더보기
-          </Text>
-          <View style={Main_LayoutiPhone14Styles.Frame6}>
-            <Svg id='Vector1' />
-          </View>
+        <View style={styles.parent}>
+          <Text style={styles.text2}>더보기</Text>
+          <Image
+            style={styles.groupChild}
+            contentFit="cover"
+            //source={require('../assets/frame-6.png')}
+          />
         </View>
       </View>
-      <Text style={Main_LayoutiPhone14Styles.}>
-        투표는 투기장
-      </Text>
-      <Image /* source={require('./Rectangle3.png')} */ />
-      <Svg id='Rectangle5' />
-      <View style={Main_LayoutiPhone14Styles.ThumbLayout}>
-        <View style={Main_LayoutiPhone14Styles.Rectangle4} />
-        <View style={Main_LayoutiPhone14Styles.thumb_icon}>
-          <View style={Main_LayoutiPhone14Styles.Group15}>
-            <View style={Main_LayoutiPhone14Styles.Group13}>
-              <View style={Main_LayoutiPhone14Styles.Group11}>
-                <View style={Main_LayoutiPhone14Styles.Frame4}>
-
-                </View>
-              </View>
-            </View>
-          </View>
-          <Svg id='shape' />
-        </View>
-        <Text style={Main_LayoutiPhone14Styles.1234}>
+      <Text style={styles.text3}>투표는 투기장</Text>
+      <Pressable
+        style={[styles.wrapper, styles.wrapperPosition]}
+        onPress={() =>
+          navigation.navigate('VoteMainLayoutBeforeIPhone')
+        }
+      >
+        <Image
+          style={styles.icon}
+          contentFit="cover"
+          //source={require('./assets/favicon.png')}
+        />
+      </Pressable>
+      <Image
+        style={styles.mainLayoutIphone14Child}
+        contentFit="cover"
+        //source={require('../assets/rectangle-5.png')}
+      />
+      <View
+        style={[
+          styles.thumblayout,
+          styles.thumblayoutLayout,
+        ]}
+      >
+        <View
+          style={[
+            styles.thumblayoutChild,
+            styles.thumblayoutLayout,
+          ]}
+        />
+        <Image
+          style={[styles.thumbIcon, styles.iconPosition]}
+          contentFit="cover"
+          //source={require('../assets/thumb-icon.png')}
+        />
+        <Text style={[styles.text4, styles.textTypo]}>
           1,234
         </Text>
       </View>
-      <Text style={Main_LayoutiPhone14Styles.}>
+      <Text style={[styles.text5, styles.textPosition]}>
         테스트사이즈
       </Text>
-      <Text style={Main_LayoutiPhone14Styles.}>
+      <Text style={[styles.text6, styles.textPosition]}>
         투표는 투기장
       </Text>
-      <View style={Main_LayoutiPhone14Styles.Indicator}>
-        <View style={Main_LayoutiPhone14Styles.Ellipse1} />
-        <View style={Main_LayoutiPhone14Styles.Ellipse3} />
-        <View style={Main_LayoutiPhone14Styles.Ellipse5} />
-        <View style={Main_LayoutiPhone14Styles.Ellipse2} />
-        <View style={Main_LayoutiPhone14Styles.Ellipse4} />
-        <View style={Main_LayoutiPhone14Styles.Ellipse6} />
-      </View>
-      <View style={Main_LayoutiPhone14Styles.Category}>
-        <Text style={Main_LayoutiPhone14Styles.}>
+      <Image
+        style={styles.indicatorIcon}
+        contentFit="cover"
+        //source={require('../assets/indicator.png')}
+      />
+      <View
+        style={[styles.category1, styles.categoryLayout]}
+      >
+        <Text style={[styles.text1, styles.textTypo1]}>
           카테고리별 투표
         </Text>
-        <View style={Main_LayoutiPhone14Styles.Group5}>
-          <Text style={Main_LayoutiPhone14Styles.}>
-            더보기
-          </Text>
-          <View style={Main_LayoutiPhone14Styles.Frame6}>
-            <Svg id='Vector1' />
-          </View>
+        <View style={styles.parent}>
+          <Text style={styles.text2}>더보기</Text>
+          <Image
+            style={styles.groupChild}
+            contentFit="cover"
+            // source={require('../assets/frame-6.png')}
+          />
         </View>
       </View>
-      <View style={Main_LayoutiPhone14Styles.Frame6}>
-        <View style={Main_LayoutiPhone14Styles.HomeIndicator} />
+      <View style={styles.homeIndicatorWrapper}>
+        <View
+          style={[
+            styles.homeIndicator,
+            styles.wrapperPosition,
+          ]}
+        />
       </View>
     </View>
-  )
-}
+  );
+};
 
-const Main_LayoutiPhone14Styles = StyleSheet.create({
-  Main_LayoutiPhone14: {
-    width: 24.38,
-    height: 52.75,
-    backgroundColor: '#f5f5f5',
+const styles = StyleSheet.create({
+  thumblayoutChildPosition: {
+    top: 0,
+    left: 0,
   },
-  Frame3: {
-    width: 24.38,
-    height: 2.75,
+  iconPosition: {
+    top: 4,
+    position: 'absolute',
   },
-  Group3: {
-    margin: '1.13 0.75',
-    width: 22.15,
-    height: 1.25,
+  categoryLayout: {
+    height: 22,
+    width: 342,
+    left: 24,
+    position: 'absolute',
   },
-  RightSide: {
-    margin: '17.98 0.27',
-    width: 4.17,
-    height: 0.71,
-  },
-  Battery: {
-    margin: '2.65 0',
-    width: '36.5%',
-    height: '99.97%',
-  },
-  941: {
-    width: 3.38,
-    height: 1.25,
-    color: '#111111',
-    fontFamily: 'SF Pro Text, sans-serif',
-    fontSize: 0.94,
+  textTypo1: {
+    textAlign: 'left',
+    color: Color.colorDarkslategray,
+    fontFamily: FontFamily.pretendard,
     fontWeight: '600',
-    lineHeight: 1.25,
-    letterSpacing: -0.5,
+    position: 'absolute',
+  },
+  wrapperPosition: {
+    left: '50%',
+    position: 'absolute',
+  },
+  thumblayoutLayout: {
+    height: 32,
+    width: 83,
+    position: 'absolute',
+  },
+  textTypo: {
+    fontSize: FontSize.size_sm,
+    letterSpacing: -0.3,
+    lineHeight: 22,
+  },
+  textPosition: {
+    left: 64,
+    color: Color.colorBlack,
+    textAlign: 'left',
+    fontFamily: FontFamily.pretendard,
+    position: 'absolute',
+  },
+  rightSideIcon: {
+    right: 0,
+    width: 67,
+    height: 11,
+  },
+  text: {
+    fontSize: FontSize.defaultBoldSubheadline_size,
+    letterSpacing: 0,
+    lineHeight: 20,
+    fontFamily: FontFamily.defaultBoldSubheadline,
+    color: Color.colorGray_200,
     textAlign: 'center',
-  },
-  Category: {
-    margin: '1.5 6.69',
-    width: 21.38,
-    height: 1.38,
-  },
-  a: {
-    width: 6.94,
-    height: 1.38,
-    color: '#383838',
-    fontFamily: 'Pretendard, sans-serif',
-    fontSize: 1.13,
+    width: 54,
     fontWeight: '600',
-    lineHeight: 1.38,
-    letterSpacing: -0.45,
+    height: 20,
+    left: 0,
+    top: 0,
+    position: 'absolute',
   },
-  Group5: {
-    margin: '18.81 0.38',
-    width: 2.56,
-    height: 1,
+  rightSideParent: {
+    top: 12,
+    right: 18,
+    width: 354,
+    height: 20,
+    position: 'absolute',
   },
-  b: {
-    width: 1.94,
-    height: 1,
-    color: '#767676',
-    fontFamily: 'Pretendard, sans-serif',
-    fontSize: 0.75,
-    fontWeight: '600',
-    lineHeight: 1,
-    letterSpacing: -0.30000000000000004,
+  mainLayoutIphone14Inner: {
+    height: 44,
+    width: 390,
+    left: 0,
+    position: 'absolute',
+    overflow: 'hidden',
   },
-  Frame6: {
-    margin: '1.94 0.19',
-    width: 0.63,
-    height: 0.63,
-  },
-  c: {
-    margin: '1.5 3.75',
-    width: 7.94,
-    height: 2.13,
-    color: '#000000',
-    fontFamily: 'Pretendard, sans-serif',
-    fontSize: 1.5,
-    fontWeight: '600',
-    lineHeight: 2.13,
-    letterSpacing: -0.6000000000000001,
-  },
-  ThumbLayout: {
-    margin: '15.81 23.94',
-    width: 5.19,
-    height: 2,
-  },
-  Rectangle4: {
-    width: 5.19,
-    height: 2,
-    backgroundColor: '#ffffff',
-    borderRadius: 62.5,
-    boxShadow: 0 0.5 0.5 'rgba(0, 0, 0, 0.05)',
-  },
-  thumb_icon: {
-    margin: '0.63 0.25',
-    width: 1.5,
-    height: 1.5,
-  },
-  Group15: {
-    width: 1.5,
-    height: 1.5,
-  },
-  Group13: {
-    width: 1.5,
-    height: 1.5,
-  },
-  Group11: {
-    width: 1.5,
-    height: 1.5,
-  },
-  Frame4: {
-    width: 1.5,
-    height: 1.5,
-  },
-  1234: {
-    margin: '2.38 0.31',
-    width: 2.19,
-    height: 1.38,
-    color: '#383838',
-    fontFamily: 'Pretendard, sans-serif',
-    fontSize: 0.88,
-    fontWeight: '600',
-    lineHeight: 1.38,
-    letterSpacing: -0.35000000000000003,
-  },
-  : {
-    margin: '4 23.38',
-    width: 5.06,
-    height: 1.5,
-    color: '#000000',
-    fontFamily: 'Pretendard, sans-serif',
-    fontSize: 1,
-    fontWeight: '600',
-    lineHeight: 1.5,
+  text1: {
+    fontSize: FontSize.size_lg,
+    lineHeight: 22,
+    textAlign: 'left',
+    color: Color.colorDarkslategray,
+    fontFamily: FontFamily.pretendard,
     letterSpacing: -0.4,
+    left: 0,
+    top: 0,
   },
-  : {
-    margin: '4 25.13',
-    width: 4.69,
-    height: 1.38,
-    color: '#000000',
-    fontFamily: 'Pretendard, sans-serif',
-    fontSize: 0.88,
-    lineHeight: 1.38,
-    letterSpacing: -0.35000000000000003,
-  },
-  Indicator: {
-    margin: '10.13 30.25',
-    width: 4.13,
-    height: 0.38,
-  },
-  Ellipse1: {
-    width: 0.38,
-    height: 0.38,
-    backgroundColor: '#000000',
-    borderRadius: '50%',
-  },
-  Ellipse3: {
-    margin: '1.5 0',
-    width: 0.38,
-    height: 0.38,
-    backgroundColor: '#dbdbdb',
-    borderRadius: '50%',
-  },
-  Ellipse5: {
-    margin: '3 0',
-    width: 0.38,
-    height: 0.38,
-    backgroundColor: '#dbdbdb',
-    borderRadius: '50%',
-  },
-  Ellipse2: {
-    margin: '0.75 0',
-    width: 0.38,
-    height: 0.38,
-    backgroundColor: '#dbdbdb',
-    borderRadius: '50%',
-  },
-  Ellipse4: {
-    margin: '2.25 0',
-    width: 0.38,
-    height: 0.38,
-    backgroundColor: '#dbdbdb',
-    borderRadius: '50%',
-  },
-  Ellipse6: {
-    margin: '3.75 0',
-    width: 0.38,
-    height: 0.38,
-    backgroundColor: '#dbdbdb',
-    borderRadius: '50%',
-  },
-  Category: {
-    margin: '1.5 32.94',
-    width: 21.38,
-    height: 1.38,
-  },
-  : {
-    width: 6.94,
-    height: 1.38,
-    color: '#383838',
-    fontFamily: 'Pretendard, sans-serif',
-    fontSize: 1.13,
+  text2: {
+    fontSize: FontSize.size_xs,
+    lineHeight: 16,
+    color: Color.colorGray_100,
+    letterSpacing: -0.3,
+    textAlign: 'left',
+    fontFamily: FontFamily.pretendard,
     fontWeight: '600',
-    lineHeight: 1.38,
-    letterSpacing: -0.45,
+    left: 0,
+    top: 0,
+    position: 'absolute',
   },
-  Group5: {
-    margin: '18.81 0.38',
-    width: 2.56,
-    height: 1,
+  groupChild: {
+    top: 3,
+    left: 31,
+    width: 10,
+    height: 10,
+    position: 'absolute',
+    overflow: 'hidden',
   },
-  : {
-    width: 1.94,
-    height: 1,
-    color: '#767676',
-    fontFamily: 'Pretendard, sans-serif',
-    fontSize: 0.75,
+  parent: {
+    top: 6,
+    left: 301,
+    width: 41,
+    height: 16,
+    position: 'absolute',
+  },
+  category: {
+    top: 107,
+  },
+  text3: {
+    top: 60,
+    fontSize: 24,
+    letterSpacing: -0.6,
+    lineHeight: 34,
+    color: Color.colorBlack,
+    textAlign: 'left',
+    fontFamily: FontFamily.pretendard,
+    left: 24,
     fontWeight: '600',
-    lineHeight: 1,
-    letterSpacing: -0.30000000000000004,
+    position: 'absolute',
   },
-  Frame6: {
-    margin: '1.94 0.19',
-    width: 0.63,
-    height: 0.63,
+  icon: {
+    marginTop: -278,
+    marginLeft: -195,
+    borderRadius: 20,
+    height: '100%',
+    width: '100%',
   },
-  Frame6: {
-    width: 24.38,
-    height: 2.13,
+  wrapper: {
+    top: '50%',
+    height: 360,
+    width: 390,
   },
-  HomeIndicator: {
-    margin: '8 1.31',
-    width: 8.38,
-    height: 0.31,
-    backgroundColor: '#626877',
-    borderRadius: 6.25,
+  mainLayoutIphone14Child: {
+    top: 354,
+    left: 44,
+    borderRadius: 16,
+    width: 302,
+    height: 90,
+    position: 'absolute',
   },
+  thumblayoutChild: {
+    borderRadius: 1000,
+    backgroundColor: Color.colorWhite,
+    shadowColor: 'rgba(0, 0, 0, 0.05)',
+    shadowOffset: {
+      width: 0,
+      height: 8,
+    },
+    shadowRadius: 8,
+    elevation: 8,
+    shadowOpacity: 1,
+    left: 0,
+    top: 0,
+  },
+  thumbIcon: {
+    left: 10,
+    width: 24,
+    height: 24,
+  },
+  text4: {
+    top: 5,
+    left: 38,
+    textAlign: 'left',
+    color: Color.colorDarkslategray,
+    fontFamily: FontFamily.pretendard,
+    fontWeight: '600',
+    position: 'absolute',
+  },
+  thumblayout: {
+    top: 383,
+    left: 253,
+  },
+  text5: {
+    top: 374,
+    fontSize: FontSize.size_base,
+    lineHeight: 24,
+    letterSpacing: -0.4,
+    left: 64,
+    fontWeight: '600',
+  },
+  text6: {
+    top: 402,
+    fontSize: FontSize.size_sm,
+    letterSpacing: -0.3,
+    lineHeight: 22,
+  },
+  indicatorIcon: {
+    top: 484,
+    left: 162,
+    width: 66,
+    height: 6,
+    position: 'absolute',
+  },
+  category1: {
+    top: 527,
+  },
+  homeIndicator: {
+    marginLeft: -67,
+    bottom: 8,
+    borderRadius: Border.br_81xl,
+    backgroundColor: Color.colorDimgray,
+    width: 134,
+    height: 5,
+  },
+  homeIndicatorWrapper: {
+    top: 810,
+    height: 34,
+    width: 390,
+    left: 0,
+    position: 'absolute',
+    overflow: 'hidden',
+  },
+  mainLayoutIphone14: {
+    backgroundColor: Color.colorWhitesmoke,
+    flex: 1,
+    height: 844,
+    overflow: 'hidden',
+    width: '100%',
+  },
+});
 
-})
+export default MainLayoutIPhone14;
