@@ -10,6 +10,8 @@
      - "npm install -g expo-cli"
      - "npx expo install react-dom react-native-web @expo/webpack-config"
        -> 웹에서 프로젝트를 실행하려면 웹에서 프로젝트를 실행하는 데 도움이 되는 다음 종속성을 설치해야 한다고 하네요
+   - navigator와 stack
+     - npm install @react-navigation/native @react-navigation/stack
 
 2. Expo 계정 세팅
 
